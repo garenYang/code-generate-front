@@ -17,14 +17,14 @@ module.exports = {
     port: 1024,
     proxy: {
       '/ws_api': {
-        target: 'ws://100.5.14.6:8088',
+        target: 'ws://172.24.48.1:8088',
         ws: true
         // pathRewrite: {
         //   '^/ws_api': '/ws_api'
         // }
       },
       '/api/*': {
-        target: 'http://100.5.14.109:8088',
+        target: 'http://172.24.48.1:8088',
         secure: false,
         changeOrigin: true,
         pathRewrite: { '^/api': '/api' }
