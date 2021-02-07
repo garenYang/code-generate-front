@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+
+  devp-ui-vue:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    image: devp-ui-vue
+    container_name: devp-ui-vue
+    hostname: devp-ui-vue
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      - default
+#
+#networks:
+#  default:
+#    external:
+#      name: cpms-overlay
+
